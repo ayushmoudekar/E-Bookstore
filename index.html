@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Bookstore</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Login Page -->
+<div id="login-page">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- Main Content -->
+<div id="main-content" style="display: none;">
+    <!-- Header -->
+    <header>
+        <h1>E-Bookstore</h1>
+        <input type="text" id="search-box" placeholder="Search books..." oninput="searchProducts()">
+        <nav>
+            <button onclick="showHome()">Home</button>
+            <button onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
+            <button onclick="showOrderHistory()">Order History</button>
+        </nav>
+    </header>
+
+    <!-- Product List -->
+    <div id="product-list"></div>
+
+    <!-- Cart Section -->
+    <div id="cart" style="display: none;"></div>
+
+    <!-- Order History Section -->
+    <div id="order-history" style="display: none;"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
